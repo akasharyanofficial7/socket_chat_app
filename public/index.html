@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat App</title>
-
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -20,12 +19,46 @@
         padding: 20px;
         margin: 0;
       }
+
+      #newmsg {
+        width: 50%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+      }
+
+      #msglist {
+        list-style: none;
+        padding: 0;
+      }
+
+      #msglist li {
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      #btn {
+        background-color: teal;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
     <h1>Welcome to the Chat App</h1>
 
-    <button id="btn">CLICK ME</button>
+    <input type="text" id="newmsg" placeholder="Type your message..." />
+    <ul id="msglist"></ul>
+    <button id="btn">Send</button>
+
     <script src="socket.io/socket.io.js"></script>
     <script src="script.js"></script>
   </body>
